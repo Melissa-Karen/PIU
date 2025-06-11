@@ -2,24 +2,23 @@ import Children from './Children'
 import Card from './Card'
 
 const Galeria = () =>{
-    let descricao = ''
-    function handleClick(){
+    let personagem = ''
+    function handleClick(personagem){
         return(
-            console.log(personagem)
+            personagem=personagem
         )
     }
     return(
         <>
             <Children>
-                <Card onClick={handleClick} personagem={'aang'}/>
-                <Card onClick={handleClick} personagem={'sokka'}/>
-                <Card onClick={handleClick} personagem={'zuko'}/>
-                <Card onClick={handleClick} personagem={'katara'}/>
-                <Card onClick={handleClick} personagem={'toph'}/>
-                <Card onClick={handleClick} personagem={'appa'}/>
+                <Card onClick={handleClick('aang')} personagem={'aang'}/>
+                <Card onClick={handleClick('sokka')} personagem={'sokka'}/>
+                <Card onClick={handleClick('zuko')} personagem={'zuko'}/>
+                <Card onClick={handleClick('katara')} personagem={'katara'}/>
+                <Card onClick={handleClick('toph')} personagem={'toph'}/>
+                <Card onClick={handleClick('appa')} personagem={'appa'}/>
             </Children>
-
-            <h1>{descricao}</h1>
+            <h1>{personagem}</h1>
         </>
     )
 }
